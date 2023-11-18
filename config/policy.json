@@ -1,0 +1,50 @@
+{
+  "scrubs": {
+    "colors": {
+      "wine": "1x",
+      "navy": "5x"
+    },
+    "brands": {
+      "HH": [
+        "wine",
+        "navy"
+      ],
+      "Med Couture": [
+        "wine",
+        "navy"
+      ]
+    },
+    "sizes": {
+      "petite": {
+        "xxs": 1,
+        "xs": 2,
+        "s": 3,
+        "m": 3,
+        "l": 3,
+        "xl": 2,
+        "1x": 1
+      },
+      "regular": {
+        "xxs": 1,
+        "xs": 2,
+        "s": 3,
+        "m": 3,
+        "l": 3,
+        "xl": 2,
+        "1x": 1,
+        "2x": 1,
+        "3x": 1,
+        "4x": 1,
+        "5x": 1
+      },
+      "tall": {
+        "xxs": 1,
+        "xs": 2,
+        "s": 2,
+        "m": 2,
+        "l": 2,
+        "xl": 2
+      }
+    }
+  }
+}
