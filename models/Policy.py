@@ -7,15 +7,19 @@ class Scrubs(Seed):
     def __init__(
         self,
         colors: dict,
-        brands: dict,
         sizes: dict,
     ):
-        self.colors = colors
-        self.brands = brands
-        self.sizes = sizes
+        self._colors = colors
+        self._sizes = sizes
 
     def get_sizes(self):
-        return self.sizes.keys()
+        return self._sizes.keys()
+
+    def colors(self, brand):
+        return self._colors.get(brand, {})
+
+    def desire(self, length, size):
+        return self._sizes.get(length, {}).get(size, {})
 
 
 class Policy(Seed):

@@ -1,10 +1,6 @@
 {
   "scrubs": {
     "colors": {
-      "wine": "1x",
-      "navy": "5x"
-    },
-    "brands": {
       "hh": [
         "wine",
         "navy"
