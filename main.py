@@ -15,17 +15,18 @@ def get_missing_style(obj):
     sub = df[df["CODE"] == obj]
     brand = sub["BRAND"].iloc[0]
 
-    missing_colors = {}
-    for color in policy.scrubs.colors(brand):
-        if color not in sub["COLOR"].unique():
-            missing_colors[color] = {
-                length: {
-                    size: policy.scrubs.desire(length, size)
-                    for size in szs
-                    if policy.scrubs.desire(length, size)
-                }
-                for length in policy.scrubs.get_sizes()
+    missing_colors = {
+        color: {
+            length: {
+                size: policy.scrubs.desire(length, size)
+                for size in szs
+                if policy.scrubs.desire(length, size)
             }
+            for length in policy.scrubs.get_sizes()
+        }
+        for color in policy.scrubs.colors(brand)
+        if color not in sub["COLOR"].unique()
+    }
 
     missing_sizes = {}
     for _, r in sub.iterrows():
